@@ -1,157 +1,195 @@
-import { Brain, Heart, BarChart3, Shield, Globe, ArrowRight } from "lucide-react"
+import { Brain, Heart, BarChart3, Shield, Users, Globe, Award, Zap } from "lucide-react"
 
 const About = () => {
   const features = [
     {
       icon: Brain,
-      title: "Machine Learning Predictions",
+      title: "AI-Powered Predictions",
       description:
-        "Advanced AI algorithms analyze product data, environmental conditions, and historical patterns to predict spoilage with 95% accuracy.",
-      tech: "TensorFlow, Scikit-Learn",
+        "Advanced machine learning algorithms analyze multiple factors to predict spoilage with 95% accuracy, helping you make informed decisions about your inventory.",
     },
     {
       icon: Heart,
       title: "Smart Donation Matching",
       description:
-        "Automatically connects surplus food with local NGOs and food banks, optimizing logistics and maximizing community impact.",
-      tech: "Google Maps API, Real-time Matching",
+        "Automatically connect surplus food with local NGOs and food banks, ensuring nothing goes to waste while helping communities in need.",
     },
     {
       icon: BarChart3,
       title: "Real-time Analytics",
       description:
-        "Comprehensive dashboards track waste reduction, cost savings, and environmental impact with interactive visualizations.",
-      tech: "React, D3.js, Real-time Data",
+        "Comprehensive dashboards track waste reduction, cost savings, and environmental impact with detailed insights and trends.",
     },
     {
       icon: Shield,
       title: "Quality Assurance",
       description:
-        "Natural Language Processing analyzes customer feedback to identify quality issues and improve prediction accuracy.",
-      tech: "Hugging Face Transformers, NLP",
+        "NLP analysis of customer feedback ensures food quality standards are maintained while identifying potential issues early.",
+    },
+    {
+      icon: Users,
+      title: "Community Impact",
+      description:
+        "Connect with local organizations to maximize social impact and build stronger community relationships through food donations.",
+    },
+    {
+      icon: Globe,
+      title: "Environmental Benefits",
+      description:
+        "Reduce carbon footprint and environmental impact by minimizing food waste and optimizing supply chain efficiency.",
     },
   ]
 
-  const workflow = [
-    {
-      step: 1,
-      title: "Data Collection",
-      description: "Gather product information, environmental data, and customer feedback",
-    },
-    {
-      step: 2,
-      title: "AI Analysis",
-      description: "Machine learning models predict spoilage risk and optimal actions",
-    },
-    {
-      step: 3,
-      title: "Smart Alerts",
-      description: "Proactive notifications suggest discounts, donations, or restocking",
-    },
-    {
-      step: 4,
-      title: "Action & Impact",
-      description: "Execute recommendations and track sustainability metrics",
-    },
+  const stats = [
+    { number: "95%", label: "Prediction Accuracy", description: "ML model accuracy in spoilage prediction" },
+    { number: "40%", label: "Waste Reduction", description: "Average reduction in food waste" },
+    { number: "500+", label: "Retailers", description: "Stores using FreshTrack globally" },
+    { number: "2.5M", label: "Meals Donated", description: "Community meals facilitated" },
   ]
 
-  const techStack = [
-    { category: "Frontend", technologies: ["React", "JavaScript", "Tailwind CSS"] },
-    { category: "Backend", technologies: ["Node.js", "Express", "MongoDB"] },
-    { category: "AI/ML", technologies: ["TensorFlow", "Scikit-Learn", "Python"] },
-    { category: "Database", technologies: ["MongoDB", "PostgreSQL", "Redis"] },
-    { category: "APIs", technologies: ["Google Maps", "Weather APIs", "SMS/Email"] },
+  const team = [
+    {
+      name: "Dr. Sarah Chen",
+      role: "CEO & Co-founder",
+      bio: "Former Google AI researcher with 10+ years in machine learning and sustainability tech.",
+      image: "/placeholder.svg?height=200&width=200",
+    },
+    {
+      name: "Marcus Rodriguez",
+      role: "CTO & Co-founder",
+      bio: "Ex-Amazon engineer specializing in scalable systems and retail technology solutions.",
+      image: "/placeholder.svg?height=200&width=200",
+    },
+    {
+      name: "Dr. Priya Patel",
+      role: "Head of Data Science",
+      bio: "PhD in Computer Science with expertise in predictive analytics and food science.",
+      image: "/placeholder.svg?height=200&width=200",
+    },
+    {
+      name: "James Thompson",
+      role: "Head of Partnerships",
+      bio: "15+ years in retail operations and NGO partnerships, driving social impact initiatives.",
+      image: "/placeholder.svg?height=200&width=200",
+    },
   ]
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-              How FreshTrack Works
-            </span>
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover the technology and methodology behind our AI-powered food waste reduction platform
-          </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Revolutionizing Food Waste Management
+              </span>
+            </h1>
+            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+              FreshTrack combines cutting-edge AI technology with social impact to create a sustainable future where no
+              food goes to waste and every community is fed.
+            </p>
+            <div className="flex justify-center space-x-8">
+              <div className="text-center">
+                <Award className="h-12 w-12 text-green-600 mx-auto mb-2" />
+                <p className="text-sm font-medium text-gray-600">UN SDG Award Winner</p>
+              </div>
+              <div className="text-center">
+                <Zap className="h-12 w-12 text-blue-600 mx-auto mb-2" />
+                <p className="text-sm font-medium text-gray-600">TechCrunch Disrupt Finalist</p>
+              </div>
+              <div className="text-center">
+                <Globe className="h-12 w-12 text-purple-600 mx-auto mb-2" />
+                <p className="text-sm font-medium text-gray-600">Global Impact Leader</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
+              <p className="text-lg text-gray-600 mb-6">
+                We believe that technology can solve one of the world's most pressing problems: food waste. Every year,
+                1.3 billion tons of food is wasted globally while 828 million people go hungry.
+              </p>
+              <p className="text-lg text-gray-600 mb-6">
+                FreshTrack bridges this gap by using artificial intelligence to predict food spoilage, optimize
+                inventory management, and connect surplus food with those who need it most.
+              </p>
+              <div className="bg-green-50 p-6 rounded-lg">
+                <h3 className="font-semibold text-green-800 mb-2">Our Vision</h3>
+                <p className="text-green-700">
+                  A world where advanced technology ensures no food goes to waste, every community has access to fresh
+                  nutrition, and retailers operate with maximum efficiency and sustainability.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 gap-6">
+              {stats.map((stat, index) => (
+                <div key={index} className="bg-gray-50 p-6 rounded-xl text-center">
+                  <div className="text-3xl font-bold text-green-600 mb-2">{stat.number}</div>
+                  <div className="text-sm font-medium text-gray-900 mb-1">{stat.label}</div>
+                  <div className="text-xs text-gray-600">{stat.description}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Core Technologies</h2>
-            <p className="text-xl text-gray-600">Advanced AI and machine learning at the heart of sustainability</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow duration-300">
-                <div className="flex items-start space-x-4">
-                  <div className="bg-gradient-to-br from-green-100 to-blue-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="h-6 w-6 text-green-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                    <p className="text-gray-600 mb-3">{feature.description}</p>
-                    <div className="bg-white px-3 py-1 rounded-full text-sm text-blue-600 font-medium inline-block">
-                      {feature.tech}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Workflow Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
-            <p className="text-xl text-gray-600">From data to impact in four intelligent steps</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">How FreshTrack Works</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our comprehensive platform combines multiple technologies to deliver unprecedented accuracy and impact in
+              food waste management.
+            </p>
           </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {workflow.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="bg-gradient-to-br from-green-500 to-blue-500 w-16 h-16 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
-                  {item.step}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              >
+                <div className="bg-gradient-to-br from-green-100 to-blue-100 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                  <feature.icon className="h-8 w-8 text-green-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-gray-600">{item.description}</p>
-                {index < workflow.length - 1 && (
-                  <ArrowRight className="h-6 w-6 text-gray-400 mx-auto mt-6 hidden md:block" />
-                )}
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">{feature.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Tech Stack Section */}
+      {/* Team Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Technology Stack</h2>
-            <p className="text-xl text-gray-600">Built with modern, scalable technologies</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Our diverse team of experts combines deep technical knowledge with passion for social impact and
+              sustainability.
+            </p>
           </div>
-
-          <div className="grid md:grid-cols-5 gap-6">
-            {techStack.map((stack, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-xl text-center">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">{stack.category}</h3>
-                <div className="space-y-2">
-                  {stack.technologies.map((tech, techIndex) => (
-                    <div key={techIndex} className="bg-white px-3 py-2 rounded-lg text-sm text-gray-700">
-                      {tech}
-                    </div>
-                  ))}
-                </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {team.map((member, index) => (
+              <div key={index} className="text-center">
+                <img
+                  src={member.image || "/placeholder.svg"}
+                  alt={member.name}
+                  className="w-48 h-48 rounded-full mx-auto mb-6 object-cover"
+                />
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
+                <p className="text-green-600 font-medium mb-4">{member.role}</p>
+                <p className="text-gray-600 text-sm leading-relaxed">{member.bio}</p>
               </div>
             ))}
           </div>
@@ -161,26 +199,49 @@ const About = () => {
       {/* Impact Section */}
       <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Globe className="h-16 w-16 mx-auto mb-6 opacity-80" />
-          <h2 className="text-4xl font-bold mb-6">Global Impact Potential</h2>
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            <div>
-              <div className="text-4xl font-bold mb-2">1.3B</div>
-              <div className="text-lg opacity-90">Tons of food wasted globally per year</div>
+          <h2 className="text-4xl font-bold mb-6">Global Impact</h2>
+          <p className="text-xl mb-12 max-w-3xl mx-auto opacity-90">
+            Together with our partners, we're creating measurable change in communities worldwide.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white bg-opacity-10 p-8 rounded-xl">
+              <div className="text-4xl font-bold mb-2">15,000 tons</div>
+              <div className="text-lg opacity-90">Food waste prevented</div>
             </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">$1T</div>
-              <div className="text-lg opacity-90">Economic value of food waste annually</div>
+            <div className="bg-white bg-opacity-10 p-8 rounded-xl">
+              <div className="text-4xl font-bold mb-2">$12M</div>
+              <div className="text-lg opacity-90">Cost savings generated</div>
             </div>
-            <div>
-              <div className="text-4xl font-bold mb-2">8%</div>
-              <div className="text-lg opacity-90">Of global greenhouse gas emissions</div>
+            <div className="bg-white bg-opacity-10 p-8 rounded-xl">
+              <div className="text-4xl font-bold mb-2">250+</div>
+              <div className="text-lg opacity-90">NGO partnerships</div>
             </div>
           </div>
-          <p className="text-xl mt-8 opacity-90 max-w-3xl mx-auto">
-            FreshTrack addresses one of the world's most pressing sustainability challenges, turning waste into
-            opportunity and creating positive impact for communities worldwide.
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto text-gray-300">
+            Join hundreds of retailers who are already reducing waste, saving money, and making a positive impact on
+            their communities.
           </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              className="bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition-colors"
+            >
+              Get Started Today
+            </a>
+            <a
+              href="/dashboard"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors"
+            >
+              Try Demo
+            </a>
+          </div>
         </div>
       </section>
     </div>

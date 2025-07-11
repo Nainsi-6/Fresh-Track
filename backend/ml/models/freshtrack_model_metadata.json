@@ -1,0 +1,254 @@
+{
+  "model_version": "freshtrack-3.0.0",
+  "trained_at": "2025-07-10T02:18:49.763377",
+  "data_source": "freshtrack_excel_datasets",
+  "training_samples": 3000,
+  "feature_columns": [
+    "days_since_arrival",
+    "days_to_expiry",
+    "shelf_life_total",
+    "shelf_life_remaining_ratio",
+    "avg_temperature",
+    "avg_humidity",
+    "temp_risk",
+    "humidity_risk",
+    "stock_level",
+    "stock_risk",
+    "avg_rating",
+    "freshness_score",
+    "review_count",
+    "feedback_risk",
+    "freshness_risk",
+    "total_donated",
+    "donation_count",
+    "donation_tendency",
+    "action_count",
+    "action_frequency",
+    "category_risk_factor",
+    "cat_Bakery",
+    "cat_Dairy",
+    "cat_Frozen",
+    "cat_Meat",
+    "cat_Produce",
+    "store_S1",
+    "store_S2",
+    "store_S3",
+    "store_S4",
+    "store_S5",
+    "action_discount",
+    "action_donation_alert",
+    "action_none",
+    "action_stock_adjustment"
+  ],
+  "performance": {
+    "regression_rmse": 0.5586761350525542,
+    "classification_accuracy": 0.9983333333333333,
+    "confidence_threshold": 0.75
+  },
+  "feature_importance": [
+    {
+      "feature": "category_risk_factor",
+      "importance": 0.3395952171733733
+    },
+    {
+      "feature": "cat_Meat",
+      "importance": 0.22715564443272854
+    },
+    {
+      "feature": "cat_Frozen",
+      "importance": 0.15469347555827792
+    },
+    {
+      "feature": "cat_Produce",
+      "importance": 0.053919484526181484
+    },
+    {
+      "feature": "temp_risk",
+      "importance": 0.03970455338630622
+    },
+    {
+      "feature": "store_S1",
+      "importance": 0.0342510244429441
+    },
+    {
+      "feature": "avg_temperature",
+      "importance": 0.03383544938985771
+    },
+    {
+      "feature": "cat_Bakery",
+      "importance": 0.02577012072156093
+    },
+    {
+      "feature": "cat_Dairy",
+      "importance": 0.024946891828381963
+    },
+    {
+      "feature": "humidity_risk",
+      "importance": 0.01551257715921843
+    },
+    {
+      "feature": "avg_humidity",
+      "importance": 0.01494478274846756
+    },
+    {
+      "feature": "store_S4",
+      "importance": 0.005095992460033013
+    },
+    {
+      "feature": "stock_level",
+      "importance": 0.003711057426094591
+    },
+    {
+      "feature": "shelf_life_remaining_ratio",
+      "importance": 0.002963538288697251
+    },
+    {
+      "feature": "total_donated",
+      "importance": 0.002252502234722861
+    },
+    {
+      "feature": "days_to_expiry",
+      "importance": 0.0022380142775108992
+    },
+    {
+      "feature": "action_frequency",
+      "importance": 0.0021869139877809746
+    },
+    {
+      "feature": "days_since_arrival",
+      "importance": 0.0016660565657076057
+    },
+    {
+      "feature": "store_S2",
+      "importance": 0.0013777971390145094
+    },
+    {
+      "feature": "shelf_life_total",
+      "importance": 0.0013583254912340951
+    },
+    {
+      "feature": "feedback_risk",
+      "importance": 0.0012198230557222164
+    },
+    {
+      "feature": "store_S5",
+      "importance": 0.0011990901393074361
+    },
+    {
+      "feature": "store_S3",
+      "importance": 0.0011990639136135947
+    },
+    {
+      "feature": "avg_rating",
+      "importance": 0.0011299063270987914
+    },
+    {
+      "feature": "review_count",
+      "importance": 0.0010736749936590029
+    },
+    {
+      "feature": "donation_count",
+      "importance": 0.0009964950814634183
+    },
+    {
+      "feature": "freshness_risk",
+      "importance": 0.0009495855257755582
+    },
+    {
+      "feature": "freshness_score",
+      "importance": 0.0009429349401585134
+    },
+    {
+      "feature": "action_count",
+      "importance": 0.000920469980034173
+    },
+    {
+      "feature": "donation_tendency",
+      "importance": 0.0008967428154626729
+    },
+    {
+      "feature": "stock_risk",
+      "importance": 0.0005818733244658294
+    },
+    {
+      "feature": "action_stock_adjustment",
+      "importance": 0.0005224423151798429
+    },
+    {
+      "feature": "action_donation_alert",
+      "importance": 0.0004078451082462705
+    },
+    {
+      "feature": "action_none",
+      "importance": 0.0003910872375250995
+    },
+    {
+      "feature": "action_discount",
+      "importance": 0.0003895460041935973
+    }
+  ],
+  "category_breakdown": {
+    "final_spoilage_risk": {
+      "Bakery": 86.58536585365853,
+      "Dairy": 86.97068403908794,
+      "Frozen": 71.84075342465754,
+      "Meat": 117.13903743315508,
+      "Produce": 102.10063897763578
+    },
+    "is_spoiled": {
+      "Bakery": 333,
+      "Dairy": 362,
+      "Frozen": 199,
+      "Meat": 543,
+      "Produce": 469
+    },
+    "product_id": {
+      "Bakery": 615,
+      "Dairy": 614,
+      "Frozen": 584,
+      "Meat": 561,
+      "Produce": 626
+    }
+  },
+  "store_breakdown": {
+    "final_spoilage_risk": {
+      "S1": 80.17073170731707,
+      "S2": 95.96153846153847,
+      "S3": 95.92436974789916,
+      "S4": 95.55178268251274,
+      "S5": 96.52512998266897
+    },
+    "avg_temperature": {
+      "S1": 7.44,
+      "S2": 8.87,
+      "S3": 9.76,
+      "S4": 10.88,
+      "S5": 12.05
+    },
+    "avg_humidity": {
+      "S1": 65.55,
+      "S2": 65.32,
+      "S3": 64.63,
+      "S4": 66.0,
+      "S5": 64.58
+    }
+  },
+  "freshtrack_specifics": {
+    "category_sensitivity": {
+      "Dairy": 2,
+      "Bakery": 2,
+      "Produce": 3,
+      "Meat": 4,
+      "Frozen": 1
+    },
+    "environmental_thresholds": {
+      "temp_optimal": 6,
+      "humidity_optimal": 65
+    },
+    "prediction_windows": {
+      "base": 5,
+      "category_adjusted": true,
+      "env_adjusted": true
+    }
+  }
+}

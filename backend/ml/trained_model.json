@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "accuracy": 0.895,
+  "feature_columns": [
+    "quantity",
+    "price",
+    "temperature",
+    "humidity",
+    "days_to_expiry_from_arrival",
+    "category_Bakery",
+    "category_Dairy",
+    "category_Frozen",
+    "category_Meat",
+    "category_Produce",
+    "store_id_S002",
+    "store_id_S003",
+    "store_id_S004"
+  ],
+  "trained_at": "2025-07-06T22:35:36.517129",
+  "model_type": "RandomForestClassifier",
+  "n_features": 13
+}
