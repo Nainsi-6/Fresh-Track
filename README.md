@@ -10,9 +10,13 @@ An intelligent, role-based platform that tracks inventory shelf life in real tim
 🛠 Key Features
 
 Inventory Dashboard: Provides real-time monitoring of all products, highlighting items that require immediate attention with color-coded urgency alerts.
+
 ML Prediction Engine: Uses machine learning models trained on historical data (expiry dates, storage temperatures, sales velocity) to forecast the likelihood of spoilage.
+
 NLP Feedback Miner: Analyzes customer reviews and return reasons using natural language processing to identify potential freshness issues not visible in inventory data.
+
 Donation Integrator: Automatically matches soon-to-expire, edible food with nearby NGOs and food banks based on location and capacity via a simple API.
+
 Notification Engine: Sends timely alerts to managers and staff, prioritizing actions based on the urgency of each case.
 
 🚀 Tech Stack
